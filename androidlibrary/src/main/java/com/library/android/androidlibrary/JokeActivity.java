@@ -6,7 +6,9 @@ import android.widget.TextView;
 
 public class JokeActivity extends AppCompatActivity {
 
-    TextView textView;
+    public static final String EXTRA_KEY_JOKE = "joke";
+
+    private TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +19,10 @@ public class JokeActivity extends AppCompatActivity {
 
         String joke = getIntent().getStringExtra("joke");
 
-        textView.setText(joke);
+        if (getIntent() != null) {
+            textView.setText(EXTRA_KEY_JOKE);
+        }
+
 
     }
 }

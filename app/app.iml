@@ -205,5 +205,7 @@
     <orderEntry type="library" name="com.google.android.gms:play-services-gass-11.8.0" level="project" />
     <orderEntry type="library" scope="TEST" name="com.android.support:recyclerview-v7-25.4.0" level="project" />
     <orderEntry type="module" module-name="androidlibrary" />
+    <orderEntry type="module" module-name="androidlibrary" />
+    <orderEntry type="module" module-name="androidlibrary" />
   </component>
 </module>
