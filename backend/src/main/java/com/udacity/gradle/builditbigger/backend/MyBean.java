@@ -1,15 +1,16 @@
 package com.udacity.gradle.builditbigger.backend;
 
-/** The object model for the data we are sending through endpoints */
+import com.library.android.javalibrary.Joker;
+
+/**
+ * The object model for the data we are sending through endpoints
+ */
 public class MyBean {
 
-    private String myData;
 
     public String getData() {
-        return myData;
+         Joker joker = new Joker();
+        return joker.getJoke();
     }
 
-    public void setData(String data) {
-        myData = data;
-    }
 }
