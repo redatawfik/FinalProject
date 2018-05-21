@@ -53,6 +53,12 @@ android {
             manifest.srcFile 'src/paid/AndroidManifest.xml'
         }
     }
+
+    configurations {
+        all {
+            exclude module: 'httpclient'
+        }
+    }
 }
 
 dependencies {
@@ -65,11 +71,11 @@ dependencies {
     implementation 'com.google.code.findbugs:jsr305:3.0.1'
 
 
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-intents:3.0.1'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-contrib:3.0.1'
-    implementation 'com.android.support.test.espresso.idling:idling-concurrent:3.0.1'
-    testImplementation 'com.android.support.test.espresso.idling:idling-concurrent:3.0.1'
+    androidTestImplementation ('com.android.support.test.espresso:espresso-core:3.0.2') {
+        exclude group: 'javax.inject'
+    }
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test:rules:1.0.2'
 
     testImplementation 'junit:junit:4.12'
 
